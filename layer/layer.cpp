@@ -2,7 +2,6 @@
 #include <WindowsX.h>
 #include <tchar.h>
 
-#define MAX_LOADSTRING 100
 #define SafeDeleteObject(gdiobj) gdiobj != NULL && ::DeleteObject(gdiobj)
 #define CAPTURE_MIN_WIDTH 1
 #define CAPTURE_MIN_HEIGHT 1
@@ -18,8 +17,8 @@ RECT lastSelected = {0};
 HDC g_hMemDC;
 
 HINSTANCE hInst;
-TCHAR szTitle[MAX_LOADSTRING]=L"selector1";
-TCHAR szWindowClass[MAX_LOADSTRING]=L"selector2";
+TCHAR szTitle[]=L"selector1";
+TCHAR szWindowClass[]=L"selector2";
 
 ATOM				MyRegisterClass(HINSTANCE hInstance);
 BOOL				InitInstance(HINSTANCE, int);
